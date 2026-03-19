@@ -37,7 +37,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Theme Toggle */
+
 .theme-toggle {
     position: fixed;
     top: 10px;
@@ -59,7 +59,7 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-/* Header e Nav */
+
 header {
     position: fixed;
     top: 0;
@@ -182,7 +182,7 @@ header {
     flex-wrap: wrap;
 }
 
-/* Buttons */
+
 .btn {
     padding: 12px 30px;
     border-radius: 50px;
@@ -226,7 +226,7 @@ header {
     text-decoration: underline;
 }
 
-/* Projects Grid */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -285,7 +285,7 @@ header {
     text-align: center;
 }
 
-/* 👉 adiciona isto */
+
 .contact-item {
     display: flex;
     flex-direction: column;
@@ -324,7 +324,7 @@ footer p {
     color: var(--text-secondary);
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -362,12 +362,12 @@ footer p {
     }
 }
 
-/* Scroll suave */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Animações de entrada */
+
 .section {
     opacity: 0;
     transform: translateY(30px);
