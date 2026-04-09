@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -6,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Abreu - Game Developer</title>
     <link rel="stylesheet" href="style.css">
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="icon" type="image/x-icon" href="Lol.ico">
 </head>
 <body>
     
+    <div id="loading-spinner" class="loading-spinner" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i>
+        <span>Carregando citação...</span>
+    </div>
+    
+   
     <button id="theme-toggle" class="theme-toggle" title="Alternar tema">
         🌙
     </button>
@@ -31,6 +40,7 @@
     </header>
 
     <main style="width: 100%; height: 100%">
+        <!-- SOBRE -->
         <section id="sobre" class="section">
             <div class="container">
                 <img src="Eu.jpg" width="300" height="300"> 
@@ -40,11 +50,30 @@
                     <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
                     <a href="#contacto" class="btn btn-secondary">Contactar</a>
                 </div>
+                
+                
+                <div class="quote-section">
+                    <button id="quote-btn" class="btn btn-secondary">
+                        <i class="fas fa-quote-left"></i> Citação Inspiradora
+                    </button>
+                    <div id="daily-quote" class="daily-quote">
+                        
+                    </div>
+                </div>
             </div>
         </section>
+
+        
         <section id="projetos" class="section">
             <div class="container">
                 <h2 class="section-title">Meus Projetos</h2>
+                
+                
+                <div class="projects-header">
+                    <input type="text" id="project-search" placeholder="🔍 Procurar projetos... (Slugshoot, Assembly)">
+                    <span id="search-feedback" class="search-feedback">2 projetos encontrados</span>
+                </div>
+                
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-image">
@@ -54,7 +83,7 @@
                             <h3>Slugshoot</h3>
                             <p>Um shooter 2D pixel art onde controlas uma lesma contra maquinas futuristicas. Feito Godot com sistema de upgrades de armas e gadgets.</p>
                             <div class="project-links">
-                                <a href="https://bpgodinho.itch.io/slugshot" class="btn-link">Demo</a>
+                                <a href="https://bpgodinho.itch.io/slugshot" class="btn-link" target="_blank">Demo</a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +96,7 @@
                             <h3>Assembly Lines</h3>
                             <p>Jogo de puzzle de fabricas onde tens de fazer varias formas fabricadas pelas fabricas.Feito Godot com sistema de upgrades de armas e gadgets.</p>
                             <div class="project-links">
-                                <a href="https://bpgodinho.itch.io/assembly-lines" class="btn-link">Demo</a>
+                                <a href="https://bpgodinho.itch.io/assembly-lines" class="btn-link" target="_blank">Demo</a>
                             </div>
                         </div>
                     </div>
@@ -75,6 +104,7 @@
             </div>
         </section>
 
+        
         <section id="contacto" class="section">
             <div class="container">
                 <h2 class="section-title">Contacto</h2>
@@ -90,11 +120,14 @@
             </div>
         </section>
     </main>
+    
     <footer>
         <div class="container">
-            <p>&copy; 2026 Andrés Abreu.</p>
+            <p>&copy; 2026 Andrés Abreu. <span id="quote-credit"></span></p>
         </div>
     </footer>
+    
+    
     <script src="script.js"></script>
 </body>
 </html>
